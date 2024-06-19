@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="300dp"
+        android:layout_height="133dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:paddingTop="20dp"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:text="23:55"
+
+        android:textSize="75dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <!-- 해사진 -->
+        <!-- 달사진 -->
+        <ImageView
+            android:id="@+id/imageViewSun"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sun" />
+
+        <ImageView
+            android:id="@+id/imageViewMoon"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/moon" />
+    </LinearLayout>
+
+    <!-- 두 번째 행 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- 일출까지 남은 시간 -->
+        <TextView
+            android:id="@+id/textViewTimeUntilSunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일출 시간 : \n     5:15"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <!-- 일몰까지 남은 시간 -->
+        <TextView
+            android:id="@+id/textViewTimeUntilSunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="일몰 시간 : \n    19:20"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <!-- 알람 설정 버튼 -->
+    <Button
+        android:id="@+id/buttonSetAlarm"
+        android:layout_width="256dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/textViewTime"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="#7E7A87"
+        android:text="알람 설정" />
+
+    <!-- 수면 패턴 분석 버튼 -->
+    <Button
+        android:id="@+id/buttonSleepAnalysis"
+        android:layout_width="257dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/buttonSetAlarm"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="#8B7691"
+        android:text="수면 패턴 분석" />
+
+
+</LinearLayout>
